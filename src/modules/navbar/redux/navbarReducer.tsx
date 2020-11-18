@@ -7,10 +7,7 @@ const initState: InitState = {
   navbar: false,
 };
 
-export const navbarReducer = (
-  state: InitState = initState,
-  action: NavDispatchTypes
-) => {
+export const navbarReducer = (state: InitState = initState, action: any) => {
   switch (action.type) {
     case "NAVBAR_FALSE":
       return {
@@ -21,6 +18,16 @@ export const navbarReducer = (
       return {
         ...state,
         navbar: action.payload,
+      };
+    case "GOOGLE_SIGN_IN":
+      return {
+        ...state,
+        navbar: false,
+      };
+    case "LOGOUT":
+      return {
+        ...state,
+        navbar: false,
       };
     default:
       return state;
