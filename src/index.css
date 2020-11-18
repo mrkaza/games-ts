@@ -42,6 +42,7 @@ code {
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: 600;
+  padding: 5px;
 }
 .navbar-inside {
   position: relative;
@@ -58,8 +59,8 @@ code {
 
 .btn-logout {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #ff706e;
+  border: 2px solid #ff706e;
   border-radius: 10px;
   padding: 10px 15px;
   letter-spacing: 2px;
@@ -76,7 +77,7 @@ code {
 }
 .navbar-close i {
   font-size: 30px;
-  color: white;
+  color: #ff706e;
 }
 .navbar-sign-in {
   display: flex;
@@ -103,7 +104,7 @@ code {
 .google-sign-in {
   background: transparent;
   color: white;
-  border: 2px solid blue;
+  border: 2px solid #f3b605;
   border-radius: 10px;
   padding: 7px 10px;
 }
@@ -113,13 +114,13 @@ code {
   font-size: 17px;
 }
 .sign {
-  color: yellow;
+  color: #4081ec;
 }
 .in {
-  color: green;
+  color: #32a350;
 }
 .icon {
-  color: white;
+  color: #ff706e;
 }
 .icon i {
   font-size: 30px;
@@ -128,7 +129,26 @@ code {
 /* APP */
 
 .app {
-  padding: 70px 10px;
+  padding: 60px 10px;
   height: 100%;
   color: white;
+}
+.active {
+  border-bottom: 1px solid #ff706e;
+}
+
+/* SIGN IN */
+
+.sign-in {
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active {
+  background: transparent;
+}
+button:focus {
+  background: transparent;
 }
