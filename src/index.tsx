@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { BrowserRouter as Router } from "react-router-dom";
+
 //redux
 import { createStore, applyMiddleware } from "redux";
 import { rootReducer } from "./consts/rootReducer";
@@ -18,7 +20,6 @@ import { PersistGate } from "redux-persist/integration/react";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth"],
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = createStore(persistedReducer, applyMiddleware(thunk));
@@ -28,7 +29,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </PersistGate>
     </Provider>
   </React.StrictMode>,
