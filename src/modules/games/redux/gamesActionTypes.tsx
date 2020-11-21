@@ -1,6 +1,8 @@
+import { GameType } from "./gamesReducer";
+
 interface GetSearchedGames {
   type: "SEARCHED_GAMES";
-  payload: any;
+  payload: GameType[];
 }
 interface SearchError {
   type: "SEARCH_ERROR";
@@ -9,5 +11,17 @@ interface SearchError {
 interface SearchedNull {
   type: "SEARCHED_NULL";
 }
+interface GameDetails {
+  type: "GAME_DETAILS";
+  payload: GameType;
+}
+interface GameDetailsNull {
+  type: "GAME_DETAILS_NULL";
+}
 
-export type GamesDispatchTypes = GetSearchedGames | SearchError | SearchedNull;
+export type GamesDispatchTypes =
+  | GetSearchedGames
+  | SearchError
+  | SearchedNull
+  | GameDetails
+  | GameDetailsNull;

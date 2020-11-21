@@ -195,4 +195,92 @@ button:focus {
   background: rgba(90, 203, 203, 0.5);
   padding: 5px 10px;
   border-radius: 15px;
+  color: white;
+}
+
+/* GAME DETAILS */
+.game {
+  width: 100%;
+  overflow: hidden;
+}
+
+.game-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.game-title {
+  text-align: center;
+  padding: 0 20px;
+  font-size: 25px;
+}
+
+.game-tags {
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.game-tags p {
+  margin: 5px 0;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: 4px 9px;
+  border-radius: 10px;
+  border: 1px solid rgba(90, 203, 203, 0.5);
+}
+
+.game-desc {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.game-rel-plat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.platforms {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.platforms p {
+  margin: 0 2px;
+  padding: 0 5px;
+  border: 1px solid rgba(255, 112, 110, 0.5);
+  border-radius: 5px;
+  font-size: 11px;
+}
+.game-released {
+  font-size: 12px;
+  margin: 0;
+  color: #ff706e;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.date {
+  color: white;
+}
+
+.game-devs {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.game-devs p {
+  color: #ff706e;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 15px 0 0;
+}
+.devs ul {
+  margin: 0;
+}
+.devs li {
+  text-align: center;
+  margin-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 112, 110, 0.3);
 }

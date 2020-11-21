@@ -11,13 +11,14 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
-import { setSearchedNull } from "./modules/games";
+import { setSearchedNull, gameDetailsNull } from "./modules/games";
 import Home from "./pages/Home";
 import Newest from "./pages/Newest";
 import MostPopular from "./pages/MostPopular";
 import Error from "./pages/Error";
 import SignIn from "./pages/SignIn";
 import Searched from "./pages/Searched";
+import GameDetails from "./pages/GameDetails";
 
 function App() {
   const user: null | UserType = useSelector(
@@ -32,6 +33,9 @@ function App() {
     return history.listen((location) => {
       if (locationHook.pathname === "/search") {
         dispatch(setSearchedNull());
+      }
+      if (locationHook.pathname.includes("/game/")) {
+        dispatch(gameDetailsNull());
       }
     });
   }, [history, locationHook]);
@@ -49,6 +53,7 @@ function App() {
           <Route path="/sign-in">
             {user ? <Redirect to="/" /> : <SignIn />}
           </Route>
+          <Route path="/game/:id" component={GameDetails} />
           <Route component={Error} />
         </Switch>
       </div>
